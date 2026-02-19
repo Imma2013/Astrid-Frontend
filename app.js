@@ -1,18 +1,39 @@
-const reactionButtons = document.querySelectorAll("[data-react]");
-const followButton = document.querySelector("[data-follow]");
+const cards = document.querySelectorAll(".job-card");
+const saveButton = document.querySelector("[data-save]");
 
-reactionButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const count = button.querySelector("span");
-    const current = Number(count?.textContent ?? "0");
-    const active = button.classList.toggle("active");
-    if (count) count.textContent = String(active ? current + 1 : current - 1);
+const detail = {
+  title: document.getElementById("detail-title"),
+  company: document.getElementById("detail-company"),
+  location: document.getElementById("detail-location"),
+  pay: document.getElementById("detail-pay"),
+  summary: document.getElementById("detail-summary"),
+  bullets: document.getElementById("detail-bullets"),
+};
+
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    cards.forEach((item) => item.classList.remove("active"));
+    card.classList.add("active");
+
+    detail.title.textContent = card.dataset.title || "";
+    detail.company.textContent = card.dataset.company || "";
+    detail.location.textContent = card.dataset.location || "";
+    detail.pay.textContent = card.dataset.pay || "";
+    detail.summary.textContent = card.dataset.summary || "";
+
+    const bullets = (card.dataset.bullets || "").split("|").filter(Boolean);
+    detail.bullets.innerHTML = "";
+    bullets.forEach((line) => {
+      const li = document.createElement("li");
+      li.textContent = line;
+      detail.bullets.appendChild(li);
+    });
   });
 });
 
-if (followButton) {
-  followButton.addEventListener("click", () => {
-    const active = followButton.classList.toggle("active");
-    followButton.textContent = active ? "Following" : "Follow";
+if (saveButton) {
+  saveButton.addEventListener("click", () => {
+    const active = saveButton.classList.toggle("active");
+    saveButton.textContent = active ? "Saved" : "Save";
   });
 }

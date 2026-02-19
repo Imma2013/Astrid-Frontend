@@ -3,141 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProConnect | Professional Network</title>
+    <title>Astrid Jobs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-layer bg-grid"></div>
-    <div class="bg-layer bg-noise"></div>
-    <div class="bg-layer bg-orb"></div>
-
     <header class="topbar">
       <div class="topbar-inner">
-        <div class="brand-search">
-          <a class="logo" href="#" aria-label="ProConnect Home">pc</a>
-          <div class="search-wrap">
-            <input type="search" placeholder="Search people, jobs, companies" />
-          </div>
-        </div>
+        <a class="logo" href="#" aria-label="Astrid Home">AS</a>
         <nav class="top-nav">
-          <a href="#" class="nav-item active">Home</a>
-          <a href="#" class="nav-item">My Network</a>
-          <a href="#" class="nav-item">Jobs</a>
-          <a href="#" class="nav-item">Messaging</a>
-          <a href="#" class="nav-item">Notifications</a>
+          <a href="#" class="nav-item active">Find jobs</a>
+          <a href="#" class="nav-item">Company reviews</a>
+          <a href="#" class="nav-item">Salary guide</a>
         </nav>
+        <div class="auth-links">
+          <a href="#">Employers / Post Job</a>
+          <button>Sign in</button>
+        </div>
       </div>
     </header>
 
     <main class="page">
-      <aside class="card left-rail reveal">
-        <div class="profile-cover"></div>
-        <div class="profile-block">
-          <div class="avatar">AS</div>
-          <h1>Astrid Stone</h1>
-          <p>Frontend Engineer | Building social products with taste</p>
-          <div class="profile-tags">
-            <span>UI Systems</span>
-            <span>Growth</span>
-            <span>Product</span>
-          </div>
+      <section class="search-shell card">
+        <form class="search-row">
+          <label class="field">
+            <span>What</span>
+            <input type="text" placeholder="job title, keywords, or company" value="frontend engineer" />
+          </label>
+          <label class="field">
+            <span>Where</span>
+            <input type="text" placeholder="city, state, zip code" value="Dallas, TX" />
+          </label>
+          <button type="button" class="search-btn">Find jobs</button>
+        </form>
+        <div class="filters">
+          <button>Remote</button>
+          <button>Easy Apply</button>
+          <button>$120,000+</button>
+          <button>Full-time</button>
+          <button>Date posted</button>
         </div>
-        <div class="metric-list">
-          <button><span>Profile viewers</span><strong>271</strong></button>
-          <button><span>Post impressions</span><strong>8,492</strong></button>
-          <button><span>Search appearances</span><strong>129</strong></button>
-        </div>
-        <button class="premium">Try Premium for $0</button>
-      </aside>
-
-      <section class="feed reveal">
-        <article class="card composer">
-          <button class="start-post">Start a post</button>
-          <div class="composer-actions">
-            <button>Photo</button>
-            <button>Video</button>
-            <button>Write article</button>
-          </div>
-        </article>
-
-        <article class="card post">
-          <div class="post-head">
-            <div class="avatar small">MR</div>
-            <div>
-              <h2>Maria Rios</h2>
-              <p>Design Director at Northline</p>
-              <time>2h</time>
-            </div>
-          </div>
-          <p class="post-copy">
-            We redesigned onboarding to cut drop-off by 38% in 5 weeks. Biggest
-            win: writing microcopy like humans, not legal teams.
-          </p>
-          <div class="post-media gradient-1"></div>
-          <div class="insight-row">
-            <span class="chip">Product Design</span>
-            <span class="chip">Case Study</span>
-            <span class="chip">Team Workflow</span>
-          </div>
-          <div class="post-actions">
-            <button data-react="like">Like <span>123</span></button>
-            <button data-react="comment">Comment <span>18</span></button>
-            <button data-react="repost">Repost <span>5</span></button>
-            <button>Send</button>
-          </div>
-        </article>
-
-        <article class="card post">
-          <div class="post-head">
-            <div class="avatar small">TK</div>
-            <div>
-              <h2>Tayo Kim</h2>
-              <p>Product Lead, OrbitAI</p>
-              <time>5h</time>
-            </div>
-          </div>
-          <p class="post-copy">
-            If your PM updates do not include one hard decision and one painful
-            tradeoff, they are status theater.
-          </p>
-          <div class="post-media gradient-2"></div>
-          <div class="insight-row">
-            <span class="chip">Leadership</span>
-            <span class="chip">Execution</span>
-          </div>
-          <div class="post-actions">
-            <button data-react="like">Like <span>311</span></button>
-            <button data-react="comment">Comment <span>62</span></button>
-            <button data-react="repost">Repost <span>28</span></button>
-            <button>Send</button>
-          </div>
-        </article>
       </section>
 
-      <aside class="card right-rail reveal">
-        <h3>Trending now</h3>
-        <ul>
-          <li><strong>Frontend Platform Teams</strong><span>12,311 readers</span></li>
-          <li><strong>Remote Product Ops</strong><span>8,942 readers</span></li>
-          <li><strong>Design Tokens 2.0</strong><span>6,273 readers</span></li>
-          <li><strong>Hiring in 2026</strong><span>4,510 readers</span></li>
-        </ul>
-        <h3>Suggested for you</h3>
-        <div class="suggestion">
-          <div class="avatar small">LM</div>
-          <div>
-            <strong>Leah Morgan</strong>
-            <p>Staff Engineer at Altair</p>
+      <section class="results-layout">
+        <section class="jobs-list card">
+          <div class="jobs-header">
+            <h1>Frontend engineer jobs in Dallas, TX</h1>
+            <p>2,184 jobs</p>
           </div>
-          <button data-follow>Follow</button>
-        </div>
-      </aside>
+
+          <article class="job-card active" data-title="Senior Frontend Engineer" data-company="Northline Labs" data-location="Dallas, TX (Hybrid)" data-pay="$145,000 - $175,000 a year" data-summary="Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams." data-bullets="Lead UI architecture and design systems|Partner with product and design weekly|Ship performance improvements and accessibility fixes">
+            <h2>Senior Frontend Engineer</h2>
+            <p class="company">Northline Labs</p>
+            <p class="meta">Dallas, TX (Hybrid)</p>
+            <p class="meta">$145,000 - $175,000 a year</p>
+            <p class="snippet">Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams.</p>
+            <span class="badge">Easily apply</span>
+          </article>
+
+          <article class="job-card" data-title="Frontend Engineer II" data-company="Astrid Health" data-location="Plano, TX (Remote)" data-pay="$128,000 - $150,000 a year" data-summary="Own booking and patient engagement flows with strong UI quality and experimentation." data-bullets="Ship experiments for conversion lift|Maintain TypeScript component library|Write tests for critical user journeys">
+            <h2>Frontend Engineer II</h2>
+            <p class="company">Astrid Health</p>
+            <p class="meta">Plano, TX (Remote)</p>
+            <p class="meta">$128,000 - $150,000 a year</p>
+            <p class="snippet">Own booking and patient engagement flows with strong UI quality and experimentation.</p>
+            <span class="badge">Remote</span>
+          </article>
+
+          <article class="job-card" data-title="UI Engineer, Platform" data-company="Bluefield" data-location="Irving, TX" data-pay="$120,000 - $142,000 a year" data-summary="Build reusable dashboard primitives and data visualization components for internal teams." data-bullets="Create reusable charting primitives|Collaborate with backend platform teams|Improve visual consistency across products">
+            <h2>UI Engineer, Platform</h2>
+            <p class="company">Bluefield</p>
+            <p class="meta">Irving, TX</p>
+            <p class="meta">$120,000 - $142,000 a year</p>
+            <p class="snippet">Build reusable dashboard primitives and data visualization components for internal teams.</p>
+          </article>
+        </section>
+
+        <aside class="job-detail card">
+          <div class="detail-head">
+            <h2 id="detail-title">Senior Frontend Engineer</h2>
+            <p id="detail-company">Northline Labs</p>
+            <p id="detail-location">Dallas, TX (Hybrid)</p>
+            <p id="detail-pay">$145,000 - $175,000 a year</p>
+            <div class="detail-actions">
+              <button class="apply">Apply now</button>
+              <button class="save" data-save>Save</button>
+            </div>
+          </div>
+          <div class="detail-body">
+            <h3>Job details</h3>
+            <p id="detail-summary">Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams.</p>
+            <ul id="detail-bullets">
+              <li>Lead UI architecture and design systems</li>
+              <li>Partner with product and design weekly</li>
+              <li>Ship performance improvements and accessibility fixes</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
     </main>
 
     <script src="app.js"></script>
