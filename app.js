@@ -1,4 +1,5 @@
 const reactionButtons = document.querySelectorAll("[data-react]");
+const followButton = document.querySelector("[data-follow]");
 
 reactionButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -8,3 +9,10 @@ reactionButtons.forEach((button) => {
     if (count) count.textContent = String(active ? current + 1 : current - 1);
   });
 });
+
+if (followButton) {
+  followButton.addEventListener("click", () => {
+    const active = followButton.classList.toggle("active");
+    followButton.textContent = active ? "Following" : "Follow";
+  });
+}
