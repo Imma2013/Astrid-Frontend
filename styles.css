@@ -347,101 +347,110 @@ body {
   border-color: #b8d0f1;
 }
 
-.profile-layout {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 14px;
-}
-
-.profile-summary {
-  overflow: hidden;
-  align-self: start;
-}
-
-.profile-banner {
-  height: 92px;
-  background: linear-gradient(135deg, #2557a7, #4a7fd0);
-}
-
-.profile-content {
-  padding: 0 14px 14px;
-}
-
 .profile-avatar {
-  width: 76px;
-  height: 76px;
-  margin-top: -34px;
-  border: 3px solid #fff;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: #4d328f;
+  background: #4b4b4b;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   display: grid;
   place-items: center;
 }
 
-.profile-content h1 {
-  margin: 10px 0 4px;
-  font-size: 1.25rem;
+.profile-page {
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-.profile-content p {
-  margin: 0;
-  color: var(--muted);
+.profile-hero {
+  padding: 8px 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--line);
 }
 
-.profile-stats {
-  margin: 12px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+.profile-hero h1 {
+  margin: 0 0 12px;
+  font-size: 2.9rem;
+  font-weight: 700;
 }
 
-.profile-stats div {
-  border: 1px solid var(--line);
+.profile-hero p {
+  margin: 0 0 6px;
+  color: #4c4c4c;
+  font-size: 1.12rem;
+}
+
+.profile-banner-ok {
+  margin-top: 14px;
   border-radius: 8px;
-  padding: 8px;
-  text-align: center;
+  background: #dff1e2;
+  color: #1b6930;
+  padding: 12px 14px;
+  font-weight: 600;
 }
 
-.profile-stats strong {
-  display: block;
-  color: var(--brand-ink);
+.resume-card {
+  margin-top: 14px;
 }
 
-.profile-stats span {
-  font-size: 0.8rem;
-  color: var(--muted);
+.resume-card h2 {
+  margin: 0 0 10px;
+  font-size: 2.1rem;
 }
 
-.profile-sections {
-  padding: 14px;
+.resume-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 6px;
 }
 
-.profile-sections h2 {
-  margin: 0 0 8px;
-  font-size: 1.02rem;
+.resume-item strong {
+  font-size: 2rem;
 }
 
-.progress-wrap {
-  margin-bottom: 12px;
-  width: 100%;
-  height: 8px;
-  border-radius: 999px;
-  background: #e5e5e5;
-  overflow: hidden;
+.resume-item span {
+  color: #5d5d5d;
+  font-size: 1.15rem;
 }
 
-.progress-bar {
-  width: 82%;
-  height: 100%;
-  background: var(--brand);
+.profile-settings {
+  margin-top: 18px;
 }
 
-.activity-list {
-  margin: 0;
-  padding-left: 18px;
-  line-height: 1.65;
+.profile-settings h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.setting-row {
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.setting-row strong {
+  font-size: 2rem;
+}
+
+.setting-row p {
+  margin: 4px 0 0;
+  color: #6b6b6b;
+  font-size: 1.08rem;
+}
+
+.setting-row span {
+  color: #4f4f4f;
+  font-size: 2.2rem;
+  line-height: 1;
 }
 
 @media (max-width: 1024px) {
@@ -473,12 +482,19 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .results-layout,
-  .profile-layout {
+  .results-layout {
     grid-template-columns: 1fr;
   }
 
   .job-detail {
     position: static;
+  }
+
+  .profile-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .setting-row strong {
+    font-size: 1.3rem;
   }
 }
