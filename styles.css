@@ -17,6 +17,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   background: var(--bg);
   color: var(--text);
+  padding-bottom: 54px;
 }
 
 .topbar {
@@ -451,6 +452,31 @@ body {
   color: #4f4f4f;
   font-size: 2.2rem;
   line-height: 1;
+}
+
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #1f1f1f;
 }
 
 @media (max-width: 1024px) {
