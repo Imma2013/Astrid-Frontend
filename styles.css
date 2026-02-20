@@ -54,12 +54,15 @@ body {
 }
 
 .nav-item {
-  text-decoration: none;
+  border: 0;
+  background: transparent;
   color: #505050;
   font-size: 0.95rem;
   font-weight: 600;
   padding: 10px 2px;
   border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .nav-item.active {
@@ -87,6 +90,7 @@ body {
   padding: 8px 14px;
   font-weight: 600;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .page {
@@ -99,6 +103,14 @@ body {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 12px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
 }
 
 .search-shell {
@@ -121,13 +133,16 @@ body {
   color: var(--muted);
 }
 
-.field input {
+.field input,
+.salary-search input,
+.signin-form input {
   width: 100%;
   border: 1px solid #b8b6b4;
   border-radius: 8px;
   padding: 11px 12px;
   font-family: inherit;
   font-size: 0.95rem;
+  background: #fff;
 }
 
 .search-btn {
@@ -138,6 +153,7 @@ body {
   font-weight: 700;
   padding: 0 18px;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .filters {
@@ -157,14 +173,16 @@ body {
   font-size: 0.88rem;
 }
 
-.results-layout {
+.results-layout,
+.review-layout {
   margin-top: 16px;
   display: grid;
   grid-template-columns: 420px minmax(0, 1fr);
   gap: 14px;
 }
 
-.jobs-list {
+.jobs-list,
+.review-list {
   overflow: hidden;
 }
 
@@ -184,23 +202,30 @@ body {
   font-size: 0.88rem;
 }
 
-.job-card {
+.job-card,
+.review-card,
+.salary-card {
   padding: 12px 14px;
   border-top: 1px solid #efedeb;
   cursor: pointer;
 }
 
-.job-card:first-of-type {
+.job-card:first-of-type,
+.review-card:first-of-type {
   border-top: 0;
 }
 
-.job-card.active {
+.job-card.active,
+.review-card.active,
+.salary-card.active {
   background: #f5f9ff;
   border-left: 4px solid var(--brand);
   padding-left: 10px;
 }
 
-.job-card h2 {
+.job-card h2,
+.review-card h2,
+.salary-card h2 {
   margin: 0;
   color: #1d4d9b;
   font-size: 1.02rem;
@@ -235,7 +260,8 @@ body {
   font-weight: 600;
 }
 
-.job-detail {
+.job-detail,
+.review-detail {
   padding: 16px;
   position: sticky;
   top: 14px;
@@ -252,7 +278,8 @@ body {
   font-size: 1.4rem;
 }
 
-.detail-head p {
+.detail-head p,
+.review-detail p {
   margin: 4px 0 0;
   color: #444;
 }
@@ -263,7 +290,8 @@ body {
   gap: 10px;
 }
 
-.detail-actions button {
+.detail-actions button,
+.review-detail button {
   border-radius: 22px;
   padding: 10px 16px;
   font-family: inherit;
@@ -274,12 +302,14 @@ body {
   border: 0;
   background: var(--brand);
   color: #fff;
+  cursor: pointer;
 }
 
 .save {
   border: 1px solid var(--brand);
   background: #fff;
   color: var(--brand);
+  cursor: pointer;
 }
 
 .save.active {
@@ -287,19 +317,105 @@ body {
   color: var(--brand-ink);
 }
 
-.detail-body h3 {
+.detail-body h3,
+.review-detail h3,
+.salary-insight h3 {
   margin: 14px 0 8px;
 }
 
-.detail-body p {
-  margin: 0;
+.detail-body p,
+.review-detail p,
+.salary-insight p {
   line-height: 1.45;
 }
 
-.detail-body ul {
+.detail-body ul,
+.review-detail ul {
   margin: 10px 0 0;
   padding-left: 18px;
   line-height: 1.6;
+}
+
+.rating {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b4f9c;
+}
+
+.salary-shell {
+  padding: 16px;
+}
+
+.salary-head h1 {
+  margin: 0;
+}
+
+.salary-head p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.salary-search {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+}
+
+.salary-grid {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.range {
+  margin: 5px 0 0;
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.salary-insight {
+  margin-top: 14px;
+  padding: 14px;
+}
+
+.signin-wrap {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 22px;
+}
+
+.signin-wrap h1 {
+  margin: 0;
+}
+
+.signin-wrap p {
+  color: var(--muted);
+}
+
+.signin-form {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.signin-form label {
+  display: grid;
+  gap: 5px;
+}
+
+.signin-form span,
+.small {
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.signin-form .search-btn {
+  height: 44px;
 }
 
 @media (max-width: 1024px) {
@@ -327,15 +443,18 @@ body {
     justify-self: end;
   }
 
-  .search-row {
+  .search-row,
+  .salary-search {
     grid-template-columns: 1fr;
   }
 
-  .results-layout {
+  .results-layout,
+  .review-layout {
     grid-template-columns: 1fr;
   }
 
-  .job-detail {
+  .job-detail,
+  .review-detail {
     position: static;
   }
 }

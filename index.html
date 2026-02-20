@@ -14,94 +14,198 @@
       <div class="topbar-inner">
         <a class="logo" href="#" aria-label="Astrid Home">AS</a>
         <nav class="top-nav">
-          <a href="#" class="nav-item active">Find jobs</a>
-          <a href="#" class="nav-item">Company reviews</a>
-          <a href="#" class="nav-item">Salary guide</a>
+          <button class="nav-item active" data-tab-target="jobs">Find jobs</button>
+          <button class="nav-item" data-tab-target="reviews">Company reviews</button>
+          <button class="nav-item" data-tab-target="salary">Salary guide</button>
         </nav>
         <div class="auth-links">
           <a href="#">Employers / Post Job</a>
-          <button>Sign in</button>
+          <button data-tab-target="signin">Sign in</button>
         </div>
       </div>
     </header>
 
     <main class="page">
-      <section class="search-shell card">
-        <form class="search-row">
-          <label class="field">
-            <span>What</span>
-            <input type="text" placeholder="job title, keywords, or company" value="frontend engineer" />
-          </label>
-          <label class="field">
-            <span>Where</span>
-            <input type="text" placeholder="city, state, zip code" value="Dallas, TX" />
-          </label>
-          <button type="button" class="search-btn">Find jobs</button>
-        </form>
-        <div class="filters">
-          <button>Remote</button>
-          <button>Easy Apply</button>
-          <button>$120,000+</button>
-          <button>Full-time</button>
-          <button>Date posted</button>
-        </div>
-      </section>
-
-      <section class="results-layout">
-        <section class="jobs-list card">
-          <div class="jobs-header">
-            <h1>Frontend engineer jobs in Dallas, TX</h1>
-            <p>2,184 jobs</p>
+      <section class="tab-panel active" data-tab="jobs">
+        <section class="search-shell card">
+          <form class="search-row">
+            <label class="field">
+              <span>What</span>
+              <input type="text" placeholder="job title, keywords, or company" value="frontend engineer" />
+            </label>
+            <label class="field">
+              <span>Where</span>
+              <input type="text" placeholder="city, state, zip code" value="Dallas, TX" />
+            </label>
+            <button type="button" class="search-btn">Find jobs</button>
+          </form>
+          <div class="filters">
+            <button>Remote</button>
+            <button>Easy Apply</button>
+            <button>$120,000+</button>
+            <button>Full-time</button>
+            <button>Date posted</button>
           </div>
-
-          <article class="job-card active" data-title="Senior Frontend Engineer" data-company="Northline Labs" data-location="Dallas, TX (Hybrid)" data-pay="$145,000 - $175,000 a year" data-summary="Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams." data-bullets="Lead UI architecture and design systems|Partner with product and design weekly|Ship performance improvements and accessibility fixes">
-            <h2>Senior Frontend Engineer</h2>
-            <p class="company">Northline Labs</p>
-            <p class="meta">Dallas, TX (Hybrid)</p>
-            <p class="meta">$145,000 - $175,000 a year</p>
-            <p class="snippet">Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams.</p>
-            <span class="badge">Easily apply</span>
-          </article>
-
-          <article class="job-card" data-title="Frontend Engineer II" data-company="Astrid Health" data-location="Plano, TX (Remote)" data-pay="$128,000 - $150,000 a year" data-summary="Own booking and patient engagement flows with strong UI quality and experimentation." data-bullets="Ship experiments for conversion lift|Maintain TypeScript component library|Write tests for critical user journeys">
-            <h2>Frontend Engineer II</h2>
-            <p class="company">Astrid Health</p>
-            <p class="meta">Plano, TX (Remote)</p>
-            <p class="meta">$128,000 - $150,000 a year</p>
-            <p class="snippet">Own booking and patient engagement flows with strong UI quality and experimentation.</p>
-            <span class="badge">Remote</span>
-          </article>
-
-          <article class="job-card" data-title="UI Engineer, Platform" data-company="Bluefield" data-location="Irving, TX" data-pay="$120,000 - $142,000 a year" data-summary="Build reusable dashboard primitives and data visualization components for internal teams." data-bullets="Create reusable charting primitives|Collaborate with backend platform teams|Improve visual consistency across products">
-            <h2>UI Engineer, Platform</h2>
-            <p class="company">Bluefield</p>
-            <p class="meta">Irving, TX</p>
-            <p class="meta">$120,000 - $142,000 a year</p>
-            <p class="snippet">Build reusable dashboard primitives and data visualization components for internal teams.</p>
-          </article>
         </section>
 
-        <aside class="job-detail card">
-          <div class="detail-head">
-            <h2 id="detail-title">Senior Frontend Engineer</h2>
-            <p id="detail-company">Northline Labs</p>
-            <p id="detail-location">Dallas, TX (Hybrid)</p>
-            <p id="detail-pay">$145,000 - $175,000 a year</p>
-            <div class="detail-actions">
-              <button class="apply">Apply now</button>
-              <button class="save" data-save>Save</button>
+        <section class="results-layout">
+          <section class="jobs-list card">
+            <div class="jobs-header">
+              <h1>Frontend engineer jobs in Dallas, TX</h1>
+              <p>2,184 jobs</p>
+            </div>
+
+            <article class="job-card active" data-title="Senior Frontend Engineer" data-company="Northline Labs" data-location="Dallas, TX (Hybrid)" data-pay="$145,000 - $175,000 a year" data-summary="Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams." data-bullets="Lead UI architecture and design systems|Partner with product and design weekly|Ship performance improvements and accessibility fixes">
+              <h2>Senior Frontend Engineer</h2>
+              <p class="company">Northline Labs</p>
+              <p class="meta">Dallas, TX (Hybrid)</p>
+              <p class="meta">$145,000 - $175,000 a year</p>
+              <p class="snippet">Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams.</p>
+              <span class="badge">Easily apply</span>
+            </article>
+
+            <article class="job-card" data-title="Frontend Engineer II" data-company="Astrid Health" data-location="Plano, TX (Remote)" data-pay="$128,000 - $150,000 a year" data-summary="Own booking and patient engagement flows with strong UI quality and experimentation." data-bullets="Ship experiments for conversion lift|Maintain TypeScript component library|Write tests for critical user journeys">
+              <h2>Frontend Engineer II</h2>
+              <p class="company">Astrid Health</p>
+              <p class="meta">Plano, TX (Remote)</p>
+              <p class="meta">$128,000 - $150,000 a year</p>
+              <p class="snippet">Own booking and patient engagement flows with strong UI quality and experimentation.</p>
+              <span class="badge">Remote</span>
+            </article>
+
+            <article class="job-card" data-title="UI Engineer, Platform" data-company="Bluefield" data-location="Irving, TX" data-pay="$120,000 - $142,000 a year" data-summary="Build reusable dashboard primitives and data visualization components for internal teams." data-bullets="Create reusable charting primitives|Collaborate with backend platform teams|Improve visual consistency across products">
+              <h2>UI Engineer, Platform</h2>
+              <p class="company">Bluefield</p>
+              <p class="meta">Irving, TX</p>
+              <p class="meta">$120,000 - $142,000 a year</p>
+              <p class="snippet">Build reusable dashboard primitives and data visualization components for internal teams.</p>
+            </article>
+          </section>
+
+          <aside class="job-detail card">
+            <div class="detail-head">
+              <h2 id="detail-title">Senior Frontend Engineer</h2>
+              <p id="detail-company">Northline Labs</p>
+              <p id="detail-location">Dallas, TX (Hybrid)</p>
+              <p id="detail-pay">$145,000 - $175,000 a year</p>
+              <div class="detail-actions">
+                <button class="apply">Apply now</button>
+                <button class="save" data-save>Save</button>
+              </div>
+            </div>
+            <div class="detail-body">
+              <h3>Job details</h3>
+              <p id="detail-summary">Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams.</p>
+              <ul id="detail-bullets">
+                <li>Lead UI architecture and design systems</li>
+                <li>Partner with product and design weekly</li>
+                <li>Ship performance improvements and accessibility fixes</li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-tab="reviews">
+        <section class="review-layout">
+          <section class="card review-list">
+            <div class="jobs-header">
+              <h1>Popular company reviews</h1>
+              <p>Compare ratings, culture, and benefits</p>
+            </div>
+
+            <article class="review-card active" data-r-title="Astrid Health" data-r-rating="4.3" data-r-meta="2,301 reviews � Healthcare" data-r-body="Supportive managers, strong mission, and clear growth paths. Team collaboration is high and workloads are generally sustainable." data-r-bullets="Health and dental on day one|Quarterly performance bonus|Career ladder with transparent levels">
+              <h2>Astrid Health</h2>
+              <p class="meta">4.3 stars � Healthcare</p>
+              <p class="snippet">Supportive managers, strong mission, and clear growth paths.</p>
+            </article>
+
+            <article class="review-card" data-r-title="Northline Labs" data-r-rating="4.0" data-r-meta="1,108 reviews � Software" data-r-body="Fast shipping culture with smart people and high ownership. Strong engineering standards but occasional deadline pressure." data-r-bullets="Hybrid flexibility|Learning stipend|Solid developer tooling">
+              <h2>Northline Labs</h2>
+              <p class="meta">4.0 stars � Software</p>
+              <p class="snippet">Fast shipping culture with smart people and high ownership.</p>
+            </article>
+
+            <article class="review-card" data-r-title="Bluefield" data-r-rating="3.8" data-r-meta="802 reviews � Fintech" data-r-body="Great colleagues and modern stack. Better planning on cross-team projects would improve day-to-day pace and alignment." data-r-bullets="401k match|Remote Fridays|Strong mentorship">
+              <h2>Bluefield</h2>
+              <p class="meta">3.8 stars � Fintech</p>
+              <p class="snippet">Great colleagues and modern stack with room to improve planning.</p>
+            </article>
+          </section>
+
+          <aside class="card review-detail">
+            <h2 id="r-title">Astrid Health</h2>
+            <p class="rating"><span id="r-rating">4.3</span>/5</p>
+            <p id="r-meta">2,301 reviews � Healthcare</p>
+            <p id="r-body">Supportive managers, strong mission, and clear growth paths. Team collaboration is high and workloads are generally sustainable.</p>
+            <h3>Highlights</h3>
+            <ul id="r-bullets">
+              <li>Health and dental on day one</li>
+              <li>Quarterly performance bonus</li>
+              <li>Career ladder with transparent levels</li>
+            </ul>
+            <button class="apply">Write a review</button>
+          </aside>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-tab="salary">
+        <section class="card salary-shell">
+          <div class="salary-head">
+            <h1>Salary guide</h1>
+            <p>Explore pay ranges by title, location, and years of experience.</p>
+            <div class="salary-search">
+              <input type="text" value="Frontend Engineer" />
+              <input type="text" value="Dallas, TX" />
+              <button class="search-btn">Search salaries</button>
             </div>
           </div>
-          <div class="detail-body">
-            <h3>Job details</h3>
-            <p id="detail-summary">Build and scale customer-facing React surfaces for a B2B analytics platform used by 10k+ teams.</p>
-            <ul id="detail-bullets">
-              <li>Lead UI architecture and design systems</li>
-              <li>Partner with product and design weekly</li>
-              <li>Ship performance improvements and accessibility fixes</li>
-            </ul>
+
+          <div class="salary-grid">
+            <article class="salary-card active" data-s-role="Frontend Engineer" data-s-range="$117,000 - $154,000" data-s-insight="Top-paying industries in this region are fintech and healthcare software.">
+              <h2>Frontend Engineer</h2>
+              <p class="range">$117,000 - $154,000</p>
+              <p class="meta">Based on 3,180 salaries</p>
+            </article>
+
+            <article class="salary-card" data-s-role="Senior Frontend Engineer" data-s-range="$142,000 - $189,000" data-s-insight="Senior roles with system design ownership trend 18% above median.">
+              <h2>Senior Frontend Engineer</h2>
+              <p class="range">$142,000 - $189,000</p>
+              <p class="meta">Based on 1,902 salaries</p>
+            </article>
+
+            <article class="salary-card" data-s-role="UI Engineer" data-s-range="$109,000 - $141,000" data-s-insight="Compensation increases with accessibility and design system specialization.">
+              <h2>UI Engineer</h2>
+              <p class="range">$109,000 - $141,000</p>
+              <p class="meta">Based on 1,266 salaries</p>
+            </article>
           </div>
-        </aside>
+
+          <aside class="salary-insight card">
+            <h3 id="s-role">Frontend Engineer</h3>
+            <p class="range" id="s-range">$117,000 - $154,000</p>
+            <p id="s-insight">Top-paying industries in this region are fintech and healthcare software.</p>
+          </aside>
+        </section>
+      </section>
+
+      <section class="tab-panel" data-tab="signin">
+        <section class="signin-wrap card">
+          <h1>Sign in to Astrid</h1>
+          <p>Save jobs, track applications, and get salary alerts.</p>
+          <form class="signin-form">
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" placeholder="Enter password" />
+            </label>
+            <button type="button" class="search-btn">Sign in</button>
+          </form>
+          <p class="small">By signing in, you agree to Astrid terms and privacy policy.</p>
+        </section>
       </section>
     </main>
 
