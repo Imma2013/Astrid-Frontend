@@ -1,4 +1,4 @@
-const tabButtons = document.querySelectorAll("[data-tab-target]");
+﻿const tabButtons = document.querySelectorAll("[data-tab-target]");
 const tabPanels = document.querySelectorAll(".tab-panel");
 
 const activateTab = (tabName) => {
@@ -104,3 +104,10 @@ salaryCards.forEach((card) => {
     salaryDetail.insight.textContent = card.dataset.sInsight || "";
   });
 });
+const notificationsButton = document.querySelector("[data-notifications]");
+
+if (notificationsButton) {
+  notificationsButton.addEventListener("click", () => {
+    notificationsButton.classList.toggle("active");
+  });
+}
