@@ -15,16 +15,11 @@
         <a class="logo" href="#" aria-label="Astrid Home">AS</a>
         <nav class="top-nav">
           <button class="nav-item active" data-tab-target="jobs">Find jobs</button>
-          <button class="nav-item" data-tab-target="reviews">Company reviews</button>
-          <button class="nav-item" data-tab-target="salary">Salary guide</button>
+          <button class="nav-item" data-tab-target="notifications">Notifications</button>
           <button class="nav-item" data-tab-target="profile">Profile</button>
         </nav>
         <div class="auth-links">
-          <button class="icon-btn" data-notifications aria-label="Notifications">
-            <span aria-hidden="true">&#128276;</span>
-          </button>
-          <a href="#">Employers / Post Job</a>
-          <button data-tab-target="signin">Sign in</button>
+          <button class="sign-in-btn">Sign in</button>
         </div>
       </div>
     </header>
@@ -110,86 +105,18 @@
         </section>
       </section>
 
-      <section class="tab-panel" data-tab="reviews">
-        <section class="review-layout">
-          <section class="card review-list">
-            <div class="jobs-header">
-              <h1>Popular company reviews</h1>
-              <p>Compare ratings, culture, and benefits</p>
-            </div>
-
-            <article class="review-card active" data-r-title="Astrid Health" data-r-rating="4.3" data-r-meta="2,301 reviews · Healthcare" data-r-body="Supportive managers, strong mission, and clear growth paths. Team collaboration is high and workloads are generally sustainable." data-r-bullets="Health and dental on day one|Quarterly performance bonus|Career ladder with transparent levels">
-              <h2>Astrid Health</h2>
-              <p class="meta">4.3 stars · Healthcare</p>
-              <p class="snippet">Supportive managers, strong mission, and clear growth paths.</p>
-            </article>
-
-            <article class="review-card" data-r-title="Northline Labs" data-r-rating="4.0" data-r-meta="1,108 reviews · Software" data-r-body="Fast shipping culture with smart people and high ownership. Strong engineering standards but occasional deadline pressure." data-r-bullets="Hybrid flexibility|Learning stipend|Solid developer tooling">
-              <h2>Northline Labs</h2>
-              <p class="meta">4.0 stars · Software</p>
-              <p class="snippet">Fast shipping culture with smart people and high ownership.</p>
-            </article>
-
-            <article class="review-card" data-r-title="Bluefield" data-r-rating="3.8" data-r-meta="802 reviews · Fintech" data-r-body="Great colleagues and modern stack. Better planning on cross-team projects would improve day-to-day pace and alignment." data-r-bullets="401k match|Remote Fridays|Strong mentorship">
-              <h2>Bluefield</h2>
-              <p class="meta">3.8 stars · Fintech</p>
-              <p class="snippet">Great colleagues and modern stack with room to improve planning.</p>
-            </article>
-          </section>
-
-          <aside class="card review-detail">
-            <h2 id="r-title">Astrid Health</h2>
-            <p class="rating"><span id="r-rating">4.3</span>/5</p>
-            <p id="r-meta">2,301 reviews · Healthcare</p>
-            <p id="r-body">Supportive managers, strong mission, and clear growth paths. Team collaboration is high and workloads are generally sustainable.</p>
-            <h3>Highlights</h3>
-            <ul id="r-bullets">
-              <li>Health and dental on day one</li>
-              <li>Quarterly performance bonus</li>
-              <li>Career ladder with transparent levels</li>
-            </ul>
-            <button class="apply">Write a review</button>
-          </aside>
-        </section>
-      </section>
-
-      <section class="tab-panel" data-tab="salary">
-        <section class="card salary-shell">
-          <div class="salary-head">
-            <h1>Salary guide</h1>
-            <p>Explore pay ranges by title, location, and years of experience.</p>
-            <div class="salary-search">
-              <input type="text" value="Frontend Engineer" />
-              <input type="text" value="Dallas, TX" />
-              <button class="search-btn">Search salaries</button>
-            </div>
+      <section class="tab-panel" data-tab="notifications">
+        <section class="card notifications-panel">
+          <div class="notifications-head">
+            <h1>Notifications</h1>
+            <button class="search-btn" type="button" data-mark-read>Mark all as read</button>
           </div>
-
-          <div class="salary-grid">
-            <article class="salary-card active" data-s-role="Frontend Engineer" data-s-range="$117,000 - $154,000" data-s-insight="Top-paying industries in this region are fintech and healthcare software.">
-              <h2>Frontend Engineer</h2>
-              <p class="range">$117,000 - $154,000</p>
-              <p class="meta">Based on 3,180 salaries</p>
-            </article>
-
-            <article class="salary-card" data-s-role="Senior Frontend Engineer" data-s-range="$142,000 - $189,000" data-s-insight="Senior roles with system design ownership trend 18% above median.">
-              <h2>Senior Frontend Engineer</h2>
-              <p class="range">$142,000 - $189,000</p>
-              <p class="meta">Based on 1,902 salaries</p>
-            </article>
-
-            <article class="salary-card" data-s-role="UI Engineer" data-s-range="$109,000 - $141,000" data-s-insight="Compensation increases with accessibility and design system specialization.">
-              <h2>UI Engineer</h2>
-              <p class="range">$109,000 - $141,000</p>
-              <p class="meta">Based on 1,266 salaries</p>
-            </article>
-          </div>
-
-          <aside class="salary-insight card">
-            <h3 id="s-role">Frontend Engineer</h3>
-            <p class="range" id="s-range">$117,000 - $154,000</p>
-            <p id="s-insight">Top-paying industries in this region are fintech and healthcare software.</p>
-          </aside>
+          <ul class="notifications-list" id="notifications-list">
+            <li class="notice unread"><strong>Northline Labs</strong> viewed your profile 1h ago.</li>
+            <li class="notice unread">New job alert: <strong>Frontend Engineer</strong> in Dallas, TX.</li>
+            <li class="notice unread">Your application for <strong>UI Engineer, Platform</strong> was updated.</li>
+            <li class="notice">Salary insight: Frontend roles in your area are up 6% this quarter.</li>
+          </ul>
         </section>
       </section>
 
@@ -233,28 +160,8 @@
           </article>
         </section>
       </section>
-
-      <section class="tab-panel" data-tab="signin">
-        <section class="signin-wrap card">
-          <h1>Sign in to Astrid</h1>
-          <p>Save jobs, track applications, and get salary alerts.</p>
-          <form class="signin-form">
-            <label>
-              <span>Email</span>
-              <input type="email" placeholder="you@example.com" />
-            </label>
-            <label>
-              <span>Password</span>
-              <input type="password" placeholder="Enter password" />
-            </label>
-            <button type="button" class="search-btn">Sign in</button>
-          </form>
-          <p class="small">By signing in, you agree to Astrid terms and privacy policy.</p>
-        </section>
-      </section>
     </main>
 
     <script src="app.js"></script>
   </body>
 </html>
-

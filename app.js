@@ -58,56 +58,12 @@ if (saveButton) {
   });
 }
 
-const reviewCards = document.querySelectorAll(".review-card");
-const reviewDetail = {
-  title: document.getElementById("r-title"),
-  rating: document.getElementById("r-rating"),
-  meta: document.getElementById("r-meta"),
-  body: document.getElementById("r-body"),
-  bullets: document.getElementById("r-bullets"),
-};
+const markReadButton = document.querySelector("[data-mark-read]");
 
-reviewCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    reviewCards.forEach((item) => item.classList.remove("active"));
-    card.classList.add("active");
-
-    reviewDetail.title.textContent = card.dataset.rTitle || "";
-    reviewDetail.rating.textContent = card.dataset.rRating || "";
-    reviewDetail.meta.textContent = card.dataset.rMeta || "";
-    reviewDetail.body.textContent = card.dataset.rBody || "";
-
-    const bullets = (card.dataset.rBullets || "").split("|").filter(Boolean);
-    reviewDetail.bullets.innerHTML = "";
-    bullets.forEach((line) => {
-      const li = document.createElement("li");
-      li.textContent = line;
-      reviewDetail.bullets.appendChild(li);
+if (markReadButton) {
+  markReadButton.addEventListener("click", () => {
+    document.querySelectorAll(".notice.unread").forEach((item) => {
+      item.classList.remove("unread");
     });
-  });
-});
-
-const salaryCards = document.querySelectorAll(".salary-card");
-const salaryDetail = {
-  role: document.getElementById("s-role"),
-  range: document.getElementById("s-range"),
-  insight: document.getElementById("s-insight"),
-};
-
-salaryCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    salaryCards.forEach((item) => item.classList.remove("active"));
-    card.classList.add("active");
-
-    salaryDetail.role.textContent = card.dataset.sRole || "";
-    salaryDetail.range.textContent = card.dataset.sRange || "";
-    salaryDetail.insight.textContent = card.dataset.sInsight || "";
-  });
-});
-const notificationsButton = document.querySelector("[data-notifications]");
-
-if (notificationsButton) {
-  notificationsButton.addEventListener("click", () => {
-    notificationsButton.classList.toggle("active");
   });
 }

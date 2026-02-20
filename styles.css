@@ -73,16 +73,9 @@ body {
 .auth-links {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.auth-links a {
-  text-decoration: none;
-  color: #4b4b4b;
-  font-size: 0.9rem;
-}
-
-.auth-links button {
+.sign-in-btn {
   border: 1px solid var(--brand);
   color: var(--brand);
   background: #fff;
@@ -91,24 +84,6 @@ body {
   font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-}
-
-.icon-btn {
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border-radius: 50%;
-  border: 1px solid #c8c6c4;
-  background: #fff;
-  color: #4f4f4f;
-  display: grid;
-  place-items: center;
-  font-size: 1rem;
-}
-
-.icon-btn.active {
-  border-color: var(--brand);
-  background: #eaf1fc;
 }
 
 .page {
@@ -151,9 +126,7 @@ body {
   color: var(--muted);
 }
 
-.field input,
-.salary-search input,
-.signin-form input {
+.field input {
   width: 100%;
   border: 1px solid #b8b6b4;
   border-radius: 8px;
@@ -191,16 +164,14 @@ body {
   font-size: 0.88rem;
 }
 
-.results-layout,
-.review-layout {
+.results-layout {
   margin-top: 16px;
   display: grid;
   grid-template-columns: 420px minmax(0, 1fr);
   gap: 14px;
 }
 
-.jobs-list,
-.review-list {
+.jobs-list {
   overflow: hidden;
 }
 
@@ -220,30 +191,23 @@ body {
   font-size: 0.88rem;
 }
 
-.job-card,
-.review-card,
-.salary-card {
+.job-card {
   padding: 12px 14px;
   border-top: 1px solid #efedeb;
   cursor: pointer;
 }
 
-.job-card:first-of-type,
-.review-card:first-of-type {
+.job-card:first-of-type {
   border-top: 0;
 }
 
-.job-card.active,
-.review-card.active,
-.salary-card.active {
+.job-card.active {
   background: #f5f9ff;
   border-left: 4px solid var(--brand);
   padding-left: 10px;
 }
 
-.job-card h2,
-.review-card h2,
-.salary-card h2 {
+.job-card h2 {
   margin: 0;
   color: #1d4d9b;
   font-size: 1.02rem;
@@ -278,8 +242,7 @@ body {
   font-weight: 600;
 }
 
-.job-detail,
-.review-detail {
+.job-detail {
   padding: 16px;
   position: sticky;
   top: 14px;
@@ -296,8 +259,7 @@ body {
   font-size: 1.4rem;
 }
 
-.detail-head p,
-.review-detail p {
+.detail-head p {
   margin: 4px 0 0;
   color: #444;
 }
@@ -308,8 +270,7 @@ body {
   gap: 10px;
 }
 
-.detail-actions button,
-.review-detail button {
+.detail-actions button {
   border-radius: 22px;
   padding: 10px 16px;
   font-family: inherit;
@@ -335,107 +296,56 @@ body {
   color: var(--brand-ink);
 }
 
-.detail-body h3,
-.review-detail h3,
-.salary-insight h3 {
+.detail-body h3 {
   margin: 14px 0 8px;
 }
 
-.detail-body p,
-.review-detail p,
-.salary-insight p {
+.detail-body p {
   line-height: 1.45;
 }
 
-.detail-body ul,
-.review-detail ul {
+.detail-body ul {
   margin: 10px 0 0;
   padding-left: 18px;
   line-height: 1.6;
 }
 
-.rating {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #1b4f9c;
-}
-
-.salary-shell {
+.notifications-panel {
   padding: 16px;
 }
 
-.salary-head h1 {
-  margin: 0;
-}
-
-.salary-head p {
-  margin: 6px 0 0;
-  color: var(--muted);
-}
-
-.salary-search {
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 10px;
-}
-
-.salary-grid {
-  margin-top: 16px;
-  display: grid;
+.notifications-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 8px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
 }
 
-.range {
-  margin: 5px 0 0;
-  font-size: 1.04rem;
-  font-weight: 700;
-  color: #2a2a2a;
-}
-
-.salary-insight {
-  margin-top: 14px;
-  padding: 14px;
-}
-
-.signin-wrap {
-  max-width: 520px;
-  margin: 24px auto;
-  padding: 22px;
-}
-
-.signin-wrap h1 {
+.notifications-head h1 {
   margin: 0;
+  font-size: 1.2rem;
 }
 
-.signin-wrap p {
-  color: var(--muted);
+.notifications-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 0;
 }
 
-.signin-form {
-  margin-top: 12px;
-  display: grid;
-  gap: 10px;
+.notice {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 8px;
+  background: #fff;
 }
 
-.signin-form label {
-  display: grid;
-  gap: 5px;
+.notice.unread {
+  background: #f0f6ff;
+  border-color: #b8d0f1;
 }
-
-.signin-form span,
-.small {
-  font-size: 0.86rem;
-  color: var(--muted);
-}
-
-.signin-form .search-btn {
-  height: 44px;
-}
-
 
 .profile-layout {
   display: grid;
@@ -533,6 +443,7 @@ body {
   padding-left: 18px;
   line-height: 1.65;
 }
+
 @media (max-width: 1024px) {
   .topbar-inner {
     grid-template-columns: auto 1fr;
@@ -558,18 +469,16 @@ body {
     justify-self: end;
   }
 
-  .search-row,
-  .salary-search {
+  .search-row {
     grid-template-columns: 1fr;
   }
 
   .results-layout,
-  .review-layout {
+  .profile-layout {
     grid-template-columns: 1fr;
   }
 
-  .job-detail,
-  .review-detail {
+  .job-detail {
     position: static;
   }
 }
