@@ -4,8 +4,8 @@
   --line: #d4d2d0;
   --text: #2d2d2d;
   --muted: #686868;
-  --brand: #2557a7;
-  --brand-ink: #164081;
+  --brand: #1f8f4e;
+  --brand-ink: #146137;
 }
 
 * {
@@ -37,16 +37,30 @@ body {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo-mark {
   width: 42px;
   height: 42px;
-  border-radius: 8px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
-  text-decoration: none;
-  background: var(--brand);
+  background: linear-gradient(135deg, #17944e, #0f6b35);
   color: #fff;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px -12px rgba(20, 97, 55, 0.85);
+}
+
+.logo-word {
+  color: #17442a;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .top-nav {
@@ -67,8 +81,8 @@ body {
 }
 
 .nav-item.active {
-  color: #1f1f1f;
-  border-bottom-color: #1f1f1f;
+  color: #17442a;
+  border-bottom-color: #17442a;
 }
 
 .auth-links {
@@ -203,14 +217,14 @@ body {
 }
 
 .job-card.active {
-  background: #f5f9ff;
+  background: #f1fbf4;
   border-left: 4px solid var(--brand);
   padding-left: 10px;
 }
 
 .job-card h2 {
   margin: 0;
-  color: #1d4d9b;
+  color: #0f6b35;
   font-size: 1.02rem;
 }
 
@@ -235,8 +249,8 @@ body {
 .badge {
   display: inline-block;
   margin-top: 8px;
-  background: #e7f3ff;
-  color: #104b95;
+  background: #e8f7ee;
+  color: #11673a;
   border-radius: 6px;
   padding: 4px 8px;
   font-size: 0.8rem;
@@ -293,7 +307,7 @@ body {
 }
 
 .save.active {
-  background: #eaf1fc;
+  background: #e8f7ee;
   color: var(--brand-ink);
 }
 
@@ -344,8 +358,8 @@ body {
 }
 
 .notice.unread {
-  background: #f0f6ff;
-  border-color: #b8d0f1;
+  background: #edf9f2;
+  border-color: #c4e7d1;
 }
 
 .profile-avatar {
@@ -388,7 +402,7 @@ body {
 .profile-banner-ok {
   margin-top: 14px;
   border-radius: 8px;
-  background: #dff1e2;
+  background: #d8f0df;
   color: #1b6930;
   padding: 12px 14px;
   font-weight: 600;
@@ -501,7 +515,7 @@ body {
 }
 
 .site-footer a:hover {
-  color: #1f1f1f;
+  color: #17442a;
 }
 
 @media (max-width: 1024px) {
@@ -549,3 +563,4 @@ body {
     font-size: 1.3rem;
   }
 }
+
