@@ -1,0 +1,36 @@
+{
+  "name": "astrid-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imma2013/Astrid-Frontend.git"
+  },
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Imma2013/Astrid-Frontend/issues"
+  },
+  "homepage": "https://github.com/Imma2013/Astrid-Frontend#readme",
+  "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.79",
+    "dexie": "^4.2.1",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.3.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3"
+  }
+}
